@@ -1,0 +1,197 @@
+/* 1.	Crea un botón que cambie de color cuando esté en estado :hover.  */
+button {
+    background-color: aqua;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+/* 2.	Usa :target para mostrar un mensaje oculto al hacer clic en un enlace.  */
+
+#mensaje {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+#mensaje:target {
+    display: block;
+}
+
+/* 3.	Da un estilo especial al primer hijo de un contenedor usando :first-child.  */
+.contenedor p:first-child {
+    font-weight: bold;
+    color: rgb(172, 65, 65);
+}
+/* 4.	Estiliza los campos de formulario no válidos usando :invalid.  */
+input:invalid {
+    border: 5px solid blue;
+}
+/* 5.	Resalta solo los campos de tipo email con :type.  */
+input [type="email"] {
+    background-color: yellow;
+}
+/* 6.	Diseña un formulario donde el campo activo (:focus) cambie de borde.  */
+input:focus {
+    border: 5px solid red;
+    outline: none;
+}
+
+/* 7.	Estiliza únicamente los elementos únicos de su tipo con :only-of-type.  */
+.lista li:only-of-type {
+    color: orange;
+    font-size: 1.2em;
+}
+/* 8.	Aplica estilo solo al primer párrafo de una sección con :first-of-type.  */
+section p:first-of-type {
+    text-decoration: underline;
+    color: violet;
+}
+/* 9.	Usa :root para definir una variable de color y aplícala.  */
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+/* 10.	Diseña una navegación con sus etiquetas semanticas que cambie su color al pasar sobre cada link.  */
+nav a:hover {
+    color: red;
+}
+/* 11.	Añade un icono antes de cada título con ::before.   */
+h2::before {
+    content: "🚀";
+}
+
+/* 12.	Añade una línea decorativa después de cada párrafo con ::after.  */
+p::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 2px solid green;
+    margin: 5px 0;
+}
+/* 13.	Crea un botón con un efecto de sombra usando ::after  */
+.shadow-btn {
+    position: relative;
+}
+
+.shadow-btn::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+/* 14.	Añade comillas antes y después de un bloque de cita.  */
+blockquote::before {
+    content: "“";
+    font-size: 2em;
+    color: green;
+}
+
+blockquote::after {
+    content: "”";
+    font-size: 2em;
+    color: green;
+}
+/* 15.	Diseña un input que tenga un ícono dentro usando ::before.  */
+.icon-input {
+    position: relative;
+    padding-left: 30px;
+}
+
+.icon-input::before {
+    content: "🔍1233";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+/* 16.	Coloca una imagen de forma relative y mueve su posición sin alterar el flujo.  */
+.imagen-relativa {
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+/* 17.	Crea una tarjeta que contenga un botón de eliminar con absolute  */
+.card {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+}
+
+.eliminar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* 18.	Haz una barra de navegación fija en la parte superior (fixed).  */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--primary-color);
+    color: rgb(47, 31, 196);
+    padding: 10px;
+}
+/* 19.	Apila dos cajas usando z-index para controlar qué caja aparece arriba, cada caja debe tener un color de fondo diferente.  */
+.caja1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    z-index: 1;
+    top: 100px;
+    left: 50px;
+}
+
+.caja2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    z-index: 2;
+    top: 120px;
+    left: 70px;
+}
+/* 20.	Diseña una card que se centre usando position y transform.  */
+.centrada {
+    position: top;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: brown;
+    padding: 20px;
+}
+/* 21.	Define una variable global para color primario y aplícala a varios elementos  */
+.usando-color {
+    color: gold;
+}
+/* 22.	Crea un tema oscuro cambiando variables en :root  */
+.dark-theme {
+    --primary-color: #f30909;
+    --secondary-color: #390ed3;
+    background: black;
+    color: white;
+}
+/* 23.	Usa una variable con valor fallback si no existe otra definida.  */
+.fallback {
+    color: var(--no-existe, purple);
+}
+/* 24.	Define variables dentro de un scope local (por ejemplo, dentro de .card).  */
+.card {
+    background:  aqua;
+}
