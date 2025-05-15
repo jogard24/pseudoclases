@@ -14,7 +14,7 @@ button:hover {
 /* 2.	Usa :target para mostrar un mensaje oculto al hacer clic en un enlace.  */
 
 #mensaje {
-    display: none;
+    display: block;
     color: green;
     margin-top: 10px;
 }
@@ -33,7 +33,7 @@ input:invalid {
     border: 5px solid blue;
 }
 /* 5.	Resalta solo los campos de tipo email con :type.  */
-input [type="email"] {
+input[type="email"] {
     background-color: yellow;
 }
 /* 6.	Diseña un formulario donde el campo activo (:focus) cambie de borde.  */
@@ -109,10 +109,14 @@ blockquote::after {
 }
 
 .icon-input::before {
-    content: "🔍1233";
+    content: "🔍";
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 8px;
+    top: 8px;
+}
+
+.icon-input input {
+  padding-left: 10px;
 }
 /* 16.	Coloca una imagen de forma relative y mueve su posición sin alterar el flujo.  */
 .imagen-relativa {
@@ -169,7 +173,7 @@ blockquote::after {
 }
 /* 20.	Diseña una card que se centre usando position y transform.  */
 .centrada {
-    position: top;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -193,5 +197,6 @@ blockquote::after {
 }
 /* 24.	Define variables dentro de un scope local (por ejemplo, dentro de .card).  */
 .card {
-    background:  aqua;
+    --mi-color-local: aqua;
+    background: var(--mi-color-local);
 }
